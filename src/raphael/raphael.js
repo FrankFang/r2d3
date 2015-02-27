@@ -40,6 +40,11 @@ function appendRaphael(parent) {
   var paper =  Raphael(parent, 0, 0),
       svg = document.createElement('svg');
 
+  if(svg.currentStyle['overflow'] === 'visible'){
+    paper.canvas.style.overflow = 'visible'
+  }
+
+
   // Create the DOM node representing the SVG docuemnt
   // This will enable us to pull in styles from the stylesheets using
   // node.currentStyle
