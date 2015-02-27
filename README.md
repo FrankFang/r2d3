@@ -8,8 +8,8 @@ build data visualizations that work in IE7+ and all modern browsers.
 Updating to v0.1.0 (2013-3-17)
 ------------------------------
 
-* R2D3 now using v3.0.8 of D3. Update your code accordingly.
-* The ```<script>``` element that loads R2D3 now needs ```charset="utf-8"``` set.
+* R2D3 now is using v3.0.8 of D3 and v2.0.0 of raphael. Update your code accordingly.
+* The `<script>` element that loads R2D3 needs `charset="utf-8"` set.
 
 
 Getting Started
@@ -23,13 +23,14 @@ the latest version of D3 correctly.
 <html>
   <head>
     <title>R2D3 101</title>
-    <!--[if lte IE 8]><script src="r2d3.js" charset="utf-8"></script><![endif]-->
+    <!--[if lte IE 8]>
+  		<script src="r2d3.js" charset="utf-8"></script>
+ 	<![endif]-->
     <!--[if gte IE 9]><!-->
-    <script src="d3.js"></script>
+		<script src="d3.js"></script>
     <!--<![endif]-->
   </head>
   <body>
-    <h1>Hello, world!</h1>
   </body>
 </html>
 ```
@@ -51,13 +52,13 @@ Limitations
 See the issues page for a listing of known issues. In addition this
 includes:
 
-### ```<use>``` ###
+### `<use>`
 Use is not supported.
   
-###````<text>````###
+### `<text>`
 * The ```dx``` and ```dy```  attributes of text are not yet supported. In the meantime, adjust the ```x``` and ```y``` attributes.
 
-###```Transforms```###
+### `Transforms`
 * Ensure translations declare both the X and Y coordinates. Example:
 
 
@@ -97,7 +98,3 @@ $ npm install uglify-js -g
 
 + **build** - `make`
 Runs the  makefile to concatenate and minify r2d3.js
-
-
-
-<a href='http://www.pledgie.com/campaigns/18826'><img alt='Click here to lend your support to: R2D3 and make a donation at www.pledgie.com !' src='http://www.pledgie.com/campaigns/18826.png?skin_name=chrome' border='0' /></a>
